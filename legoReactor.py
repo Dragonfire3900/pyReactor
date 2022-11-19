@@ -218,9 +218,10 @@ class CalcFrame(gui.MyFrame1):
 
 
 def initSerial():
-    from sys import platform as _platform
+    from sys import platform
     import serial
     ser = None
+    _platform = platform.system()
     print("Platform " + _platform + " detected.")
     print("Attempting to establish connection with arduino.")
     for i in range(10):
